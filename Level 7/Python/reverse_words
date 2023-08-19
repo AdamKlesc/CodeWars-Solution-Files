@@ -1,0 +1,6 @@
+def reverse_words(text):
+    lst = text.split(' ')
+    new_lst = []
+    for word in lst:
+        new_lst.append(word[::-1])
+    return ' '.join(new_lst)

@@ -1,0 +1,11 @@
+def unique_in_order(arr):
+    new_lst = []
+    for i in range(len(arr)):
+        if i == 0:
+            new_lst.append(arr[i])
+        else:
+            if arr[i] == arr[i-1]:
+                continue
+            else:
+                new_lst.append(arr[i])
+    return new_lst

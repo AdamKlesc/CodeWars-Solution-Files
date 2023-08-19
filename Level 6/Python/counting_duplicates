@@ -1,0 +1,10 @@
+from numpy import unique
+def duplicate_count(text):
+    not_dupes = []
+    dupes = []
+    for n in text.lower():
+        if n not in not_dupes:
+            not_dupes.append(n)
+        else:
+            dupes.append(n)
+    return len(unique(dupes))

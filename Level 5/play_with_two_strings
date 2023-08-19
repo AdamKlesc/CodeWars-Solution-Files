@@ -1,0 +1,14 @@
+def work_on_strings(a,b):
+    a_lst = []
+    b_lst = []
+    for char in a:
+        for exp in b:
+            if char.lower() == exp.lower():
+                char = char.swapcase()
+        a_lst.append(char)
+    for char in b:
+        for exp in a:
+            if char.lower() == exp.lower():
+                char = char.swapcase()
+        b_lst.append(char)
+    return ''.join(a_lst)+''.join(b_lst)

@@ -1,0 +1,2 @@
+def accum(s):
+    return '-'.join([(s[n]*(n+1)).title() for n in range(len(s))])

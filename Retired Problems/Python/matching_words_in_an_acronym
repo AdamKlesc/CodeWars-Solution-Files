@@ -1,0 +1,9 @@
+def match_words(acronym,words):
+    lst = []
+    dct = {}
+    for x in range(len(acronym)):
+        for i in range(len(words)):
+            if acronym[x] == words[i][0]:
+                lst.append(words[i])
+        dct[acronym[x]] = lst[x]
+    return dct

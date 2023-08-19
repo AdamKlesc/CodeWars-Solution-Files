@@ -1,0 +1,17 @@
+def sort_sides(lng, wdth):
+    return sorted([lng, wdth])
+
+def sqInRect(lng, wdth):
+    if lng == wdth:
+        return None
+    sml, lg = sort_sides(lng, wdth)
+    print('small', sml)
+    print('largest', lg)
+    squares = []
+    while sml > 0:
+        squares.append(sml)
+        new_side = lg - sml
+        sml, lg = sort_sides(new_side, sml)
+
+
+    return squares

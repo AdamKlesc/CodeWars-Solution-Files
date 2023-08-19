@@ -1,0 +1,6 @@
+import re
+import string
+
+def alphabet_position(text):
+    regex = re.compile('[^a-zA-Z]')
+    return ' '.join([str(string.ascii_lowercase.index(x.lower())+1) for x in regex.sub('',text)])

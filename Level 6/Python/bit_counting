@@ -1,0 +1,2 @@
+def count_bits(n):
+    return sum([int(x) for x in str(format(n, "b"))])

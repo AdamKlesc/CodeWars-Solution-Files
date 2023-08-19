@@ -1,0 +1,9 @@
+def expanded_form(num):
+    string_ver = str(num)
+    lst = []
+    for i in range(len(string_ver)):
+        if string_ver[i] == '0':
+            continue
+        else:
+            lst.append(string_ver[i]+('0'*(len(string_ver)-(i+1))))
+    return ' + '.join(lst)

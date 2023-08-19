@@ -1,0 +1,5 @@
+def binary_array_to_number(test_list):
+    res = 0
+    for ele in test_list:
+        res = (res << 1) | ele
+    return res

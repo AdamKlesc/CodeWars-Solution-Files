@@ -1,0 +1,4 @@
+def find_needle(haystack):
+    for i, word in enumerate(haystack):
+        if word == 'needle':
+            return 'found the needle at position ' + str(i)

@@ -1,0 +1,22 @@
+import math
+def prime(x, y):
+    prime_list = []
+    for i in range(x, y):
+        if i == 0 or i == 1:
+            continue
+        else:
+            for j in range(2, int(i/2)+1):
+                if i % j == 0:
+                    break
+            else:
+                prime_list.append(i)
+    return prime_list
+
+def minimum_number(numbers):
+    total = sum(numbers)
+    primes = prime(total, total+100)
+    minuses = []
+    for n in primes:
+        minuses.append(math.sqrt((total-n)**2))
+    return int(min(minuses))
+        

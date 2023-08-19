@@ -1,0 +1,33 @@
+import re
+def titlecase(s): #Creating a titlecase function
+    return re.sub(
+        r"[A-Za-z]+('[A-Za-z]+)?",
+        lambda word: word.group(0).capitalize(),
+        s)
+
+def title_case(title, minor_words =''):
+    new = []
+    minor = []
+    main = []
+    tc = []
+    fragments = title.split(' ')
+    for fragment in fragments:
+        fragment = fragment.lower()
+        new.append(fragment)
+    first = new[0]
+    rest = new[1:(len(fragments))]
+    sections = minor_words.split(' ')
+    for word in sections:
+        word = word.lower()
+        minor.append(word)
+    main.append(titlecase(first))
+    for l in rest:
+        if l in minor:
+            tc.append(l)
+        else:
+            l = titlecase(l)
+            tc.append(l)
+    main.extend(tc)
+    main = ' '.join(main)
+    print(main)
+    return main

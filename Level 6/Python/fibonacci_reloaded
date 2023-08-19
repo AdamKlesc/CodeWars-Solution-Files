@@ -1,0 +1,13 @@
+def fib(n):
+    orig = [0,1]
+    if n == 1:
+        return 0
+    elif n == 2 or n == 3:
+        return 1
+    else:
+        for x in range(n-1):
+            try:
+                orig.append(orig[x]+orig[x+1])
+            except IndexError:
+                break
+        return orig[n-1]

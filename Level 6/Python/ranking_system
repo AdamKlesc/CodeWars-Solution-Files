@@ -1,0 +1,9 @@
+def rankings(arr):
+    sort = sorted(arr)[::-1]
+    ranks = {k: v+1 for v,k in enumerate(sort)}
+    lst = []
+    for i in arr:
+        for k,v in ranks.items():
+            if i == k:
+                lst.append(v)
+    return lst

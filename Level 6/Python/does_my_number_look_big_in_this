@@ -1,0 +1,9 @@
+def narcissistic( value ):
+    lst = []
+    nums = list(str(value))
+    for i in nums:
+        lst.append(pow(int(i),len(nums)))
+    if sum(lst) == value:
+        return True
+    elif sum(lst) != value:
+        return False

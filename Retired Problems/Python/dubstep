@@ -1,0 +1,10 @@
+def song_decoder(song):
+    fragments = song.split('WUB')
+    print(fragments)
+    words = []
+    for fragment in fragments:
+        if fragment == '':
+            continue
+        else:
+            words.append(fragment)
+    return ' '.join(words)

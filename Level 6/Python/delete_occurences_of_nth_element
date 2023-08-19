@@ -1,0 +1,10 @@
+def delete_nth(order,max_e):
+    if not order or max_e < 1:
+        return [] #Submitting an empty list if the order variable is empty
+    order_dict = { x:0 for x in order } #Placing an index on the amount of times X appears in order
+    lst = [] #Holding the values
+    for n in order:
+        if order_dict[n] < max_e: 
+            order_dict[n] += 1
+            lst.append(n)
+    return lst

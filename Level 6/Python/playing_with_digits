@@ -1,0 +1,5 @@
+def dig_pow(n, p):
+    chars = [int(char) for char in str(n)]
+    powered = iter([p+i for i in range(0,len(chars))])
+    result = (sum([char ** next(powered) for char in chars]))/n
+    return result if result%1==0 else -1

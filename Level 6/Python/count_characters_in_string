@@ -1,0 +1,14 @@
+def count(s):
+    if bool(s) == True:
+        unique_chars = []
+        for char in s:
+            if char not in unique_chars:
+                unique_chars.append(char)
+        results = {}
+        for char in unique_chars:
+            num = s.count(char)
+            results[char] = num
+        return (results)
+            
+    else:
+        return {}

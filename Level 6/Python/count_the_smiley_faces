@@ -1,0 +1,9 @@
+def count_smileys(arr):
+    smileys = [":)", ":D", ";-D", ':~)', ';)', ';D', ';~D', ':-D']
+    total = 0
+    for n in arr:
+        if n in smileys:
+            total += 1
+        else:
+            continue
+    return total

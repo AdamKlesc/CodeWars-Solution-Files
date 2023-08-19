@@ -1,0 +1,9 @@
+def productFib(prod):
+    fib = [0,1]
+    while True:
+        last_two_fib = fib[-2:]
+        if prod == last_two_fib[0]*last_two_fib[1]:
+            return [last_two_fib[0],last_two_fib[1],True]
+        elif prod < last_two_fib[0]*last_two_fib[1]:
+            return [last_two_fib[0],last_two_fib[1],False]
+        fib.append(last_two_fib[0]+last_two_fib[1])

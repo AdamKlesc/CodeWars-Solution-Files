@@ -1,0 +1,7 @@
+from collections import Counter
+import operator
+def find_uniq(arr):
+    dict = Counter(arr)
+    minvalue = min(dict.items(), key = operator.itemgetter(1))[0]
+    print(minvalue)
+    return(minvalue)

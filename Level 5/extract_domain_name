@@ -1,0 +1,9 @@
+import re
+def domain_name(url):
+    if 'www' in url:
+        url_lst = url.split('.')
+        return url_lst[1]
+    else:
+        url_lst = url.split('.')
+        url_lst = url_lst[0].split('/')
+        return url_lst[len(url_lst)-1]

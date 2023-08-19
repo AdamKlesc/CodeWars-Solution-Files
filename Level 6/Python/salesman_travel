@@ -1,0 +1,24 @@
+def travel(ad, zipcode):
+    if len(ad) < 1:
+        return ':/'
+    lst = ad.split(',')
+    results = []
+    for n in lst:   
+        if (n[-8:]) == zipcode:
+            results.append(n)
+        else:
+            continue
+    if len(results) < 1:
+        return f'{zipcode}:/'
+    else:
+        street_names = []
+        nums = []
+        for n in results:
+            street = n[0:-9]
+            splitted = street.split(' ')
+            nums.append(splitted[0])
+            just_street = ' '.join(splitted[1:len(splitted)])
+            street_names.append(just_street)
+        full_street = ','.join(street_names)
+        full_nums = ','.join(nums)
+        return f'{zipcode}:{full_street}/{full_nums}'

@@ -1,0 +1,23 @@
+from math import gcd
+import math
+def convert_fracts(lst):
+    denoms = []
+    nums = []
+    for tup in lst:
+        denoms.append(tup[1])
+        nums.append(tup[0])
+    lcm = 1
+    for i in denoms:
+        lcm = lcm*i//gcd(lcm, i)
+    multiples = []
+    for i in denoms:
+        multiples.append(lcm/i)
+    multiples = iter(multiples)
+    fracs = []
+    for n in nums:
+        lst = []
+        frac = (n*int((next(multiples))))
+        lst.append(frac)
+        lst.append(lcm)
+        fracs.append(lst)
+    return fracs

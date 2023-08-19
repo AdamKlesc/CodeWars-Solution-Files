@@ -1,0 +1,16 @@
+def same_structure_as(original, other):
+    """
+    Returns True if the other array has the same nesting structure and same corresponding length of nested arrays
+    as the original array, False otherwise.
+    """
+    if not isinstance(original, list) or not isinstance(other, list):#check to see if the type is list for both original and other
+        return False
+    if len(original) != len(other):#check to see if its the same length
+        return False
+    for i in range(len(original)):
+        if isinstance(original[i], list) and isinstance(other[i], list):# recursively checks if the elements at each index have the same nesting structure
+            if not same_structure_as(original[i], other[i]):
+                return False
+        elif isinstance(original[i], list) or isinstance(other[i], list):
+            return False
+    return True

@@ -1,0 +1,12 @@
+def find_outlier(integers):
+    odds = []
+    evens = []
+    for n in integers:
+        if n%2 == 0:
+            evens.append(n)
+        else:
+            odds.append(n)
+    if len(odds) == 1:
+        return odds[0]
+    else:
+        return evens[0]

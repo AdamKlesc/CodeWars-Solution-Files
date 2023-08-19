@@ -1,0 +1,8 @@
+def find_it(arr):
+    master = dict()
+    for n in arr:
+        master[n] = master.get(n,0) + 1
+    x = master.items()
+    for k, v in x:
+        if v%2 == 1:
+            return k

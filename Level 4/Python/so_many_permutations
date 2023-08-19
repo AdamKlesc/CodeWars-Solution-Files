@@ -1,0 +1,4 @@
+import itertools
+def permutations(string):
+    perms = [''.join(p) for p in itertools.permutations(string)]
+    return list(set(perms))

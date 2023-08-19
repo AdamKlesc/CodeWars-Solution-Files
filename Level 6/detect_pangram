@@ -1,0 +1,8 @@
+import string
+
+def is_pangram(s):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    for letter in alphabet:
+        if letter not in s.lower():
+            return False
+    return True

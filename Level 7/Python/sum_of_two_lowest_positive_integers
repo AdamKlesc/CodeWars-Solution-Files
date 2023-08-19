@@ -1,0 +1,7 @@
+def sum_two_smallest_numbers(numbers):
+    lst = list()
+    for n in numbers:
+        lst.append(n)
+    numbers = sorted(lst)
+    sumtwo = numbers[0] + numbers[1]
+    return sumtwo

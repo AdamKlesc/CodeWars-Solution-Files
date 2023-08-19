@@ -1,0 +1,18 @@
+def split(word):
+    return [char for char in word]
+def encode(st):
+    st = split(st)
+    replacements = {'a':'1', 'e':'2', 'i':'3', 'o':'4', 'u':'5'}
+    replacer = replacements.get
+    x = ([replacer(n, n) for n in st])
+    words = ''.join(x)
+    print(words)
+    return words
+def decode(st):
+    st = split(st)
+    replacements = {'1':'a', '2':'e', '3':'i', '4':'o', '5':'u'}
+    replacer = replacements.get
+    x = ([replacer(n, n) for n in st])
+    words = ''.join(x)
+    print(words)
+    return words

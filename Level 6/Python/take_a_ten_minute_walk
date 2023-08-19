@@ -1,0 +1,19 @@
+def is_valid_walk(walk):
+    dct = {'horizontal': 0, 'vertical': 0, 'minutes': 0}
+    
+    for n in walk:
+        dct['minutes'] += 1
+        if n == 'n':
+            dct['vertical'] += 1
+        elif n == 's':
+            dct['vertical'] -= 1
+        elif n == 'w':
+            dct['horizontal'] += 1
+        elif n == 'e':
+            dct['horizontal'] -= 1
+    if dct['horizontal'] == 0 and dct['vertical'] == 0 and dct['minutes'] == 10:
+        print(dct)
+        return True
+    else:
+        print(dct)
+        return False

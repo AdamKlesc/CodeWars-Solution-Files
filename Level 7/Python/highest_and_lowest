@@ -1,0 +1,10 @@
+def high_and_low(numbers):
+    lst = []
+    exact = numbers.split(' ')
+    for n in exact:
+        n = int(n)
+        lst.append(n)
+    minimal = min(lst)
+    maximal = max(lst)
+    high_low = str(maximal) + ' ' + str(minimal)
+    return high_low

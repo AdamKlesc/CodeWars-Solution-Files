@@ -1,0 +1,13 @@
+def high(x):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    scores = {}
+    for key,val in enumerate(alphabet):
+        scores[val] = key+1
+    words = x.split(' ')
+    totals = [] 
+    for word in words:
+        tally = []
+        for letter in word:
+            tally.append(scores[letter])
+        totals.append(sum(tally))
+    return words[totals.index(max(totals))]

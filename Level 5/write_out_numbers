@@ -1,0 +1,18 @@
+def number2words(n):
+    singles = 'zero one two three four five six seven eight nine'
+    doubles = 'ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'
+    after19 = 'twenty thirty forty fifty sixty seventy eighty ninety'
+    singles = singles.split(' ')
+    doubles = doubles.split(' ')
+    after19 = after19.split(' ')
+    if n < 10:
+        return singles[n]
+    if n < 20:
+        return doubles[n-10]
+    if n < 100:
+        return after19[(n//10)-2] + ('' if n%10 == 0 else '-' + singles[n%10])
+    if n < 1000:
+        return number2words(n//100) + ' hundred' + (' ' + number2words(n % 100) if n % 100 > 0 else '')
+    if n < 1_000_000:
+        return number2words(n//1000) + ' thousand' + (' '+number2words(n%1000) if n%1000 > 0 else '')
+    pass

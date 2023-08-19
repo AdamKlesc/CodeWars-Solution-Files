@@ -1,0 +1,5 @@
+-- Create your SELECT statement here
+SELECT count(*) AS total_people, age
+FROM people
+GROUP BY age
+HAVING count(*) >= 10

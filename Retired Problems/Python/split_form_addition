@@ -1,0 +1,7 @@
+class Addition:
+    def __init__(self, one, two):
+        self.one = one
+        self.two = two
+    
+    def sum(self):
+        return [int(x) for x in str(int(''.join(list(map(str, self.one)))) + int(''.join(list(map(str, self.two)))))]

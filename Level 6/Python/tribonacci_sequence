@@ -1,0 +1,4 @@
+def tribonacci(signature, n):
+    for x in range(n-3):
+        signature.append(signature[x] + signature[x+1] + signature[x+2])
+    return signature[0:n]

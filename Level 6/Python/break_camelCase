@@ -1,0 +1,9 @@
+def solution(s):
+    results = []
+    for sub in s:
+        if sub == sub.upper():
+            results.append(' ')
+            results.append(sub)
+        else:
+            results.append(sub)
+    return ''.join(results)

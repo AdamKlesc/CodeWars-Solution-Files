@@ -1,0 +1,15 @@
+def thirt(n):
+    digs = [1, 10, 9, 12, 3, 4]
+    j=0
+    l1 = []
+    nums = [int(i) for i in str(n)[::-1]]
+    for i in nums:
+        if j > 5:
+            j = 0
+        l1.append(i*digs[j])
+        j = j+1
+    new_n = sum(l1)
+    if n == new_n:
+        return new_n
+    else:
+        return thirt(new_n)

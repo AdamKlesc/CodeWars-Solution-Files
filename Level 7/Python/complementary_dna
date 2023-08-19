@@ -1,0 +1,6 @@
+def DNA_strand(dna):
+    replacements = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
+    replacer = replacements.get
+    x = ([replacer(n, n) for n in dna])
+    words = ''.join(x)
+    return words

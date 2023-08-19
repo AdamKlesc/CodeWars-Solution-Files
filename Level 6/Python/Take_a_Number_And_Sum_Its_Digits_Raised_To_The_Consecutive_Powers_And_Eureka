@@ -1,0 +1,14 @@
+def sum_dig_pow(a, b): # range(a, b + 1) will be studied by the function
+    nums = []
+    for n in range(a,b+1):
+        print(n)
+        if len(str(n)) == 1:
+            nums.append(n)
+        else:
+            lst = [int(x) for x in str(n)]
+            sqrs = []
+            for x in range(len(lst)):
+                sqrs.append(lst[x]**(x+1))
+            if sum(sqrs) == n:
+                nums.append(sum(sqrs))
+    return nums

@@ -1,0 +1,11 @@
+def move_zeros(array):
+    lst = []
+    zero = []
+    total = 0
+    for n in array:
+        if n != 0:
+            lst.append(n)
+        else:
+            zero.append(n)
+    lst.extend(zero)
+    return lst

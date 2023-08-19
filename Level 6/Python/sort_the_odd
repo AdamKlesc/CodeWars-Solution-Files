@@ -1,0 +1,3 @@
+def sort_array(arr):
+    odds = iter(sorted([i for i in arr if i % 2 != 0]))
+    return [i if i % 2 == 0 else next(odds) for i in arr]

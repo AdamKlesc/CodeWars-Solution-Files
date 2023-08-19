@@ -1,0 +1,7 @@
+import math
+def isPP(n):
+	for i in range(2,n+1):
+		if math.log(n, i) < 2:
+			break
+		if i ** round(math.log(n, i)) == n:
+			return ([i, round(math.log(n, i))])

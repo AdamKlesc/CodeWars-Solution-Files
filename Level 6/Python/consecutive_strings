@@ -1,0 +1,18 @@
+def longest_consec(arr, k):
+    if len(arr) != 0 and len(arr) > k:
+        lst = []
+        max_len = -1
+        for i in list(range(len(arr))):
+            concats = []
+            for n in list(range(k)):
+                try:
+                    concats.append(arr[i+n])
+                except:
+                    pass
+            concats = ''.join(concats)
+            if len(concats) > max_len:
+                max_len = len(concats)
+                res = concats
+        return res
+    else:
+        return ''

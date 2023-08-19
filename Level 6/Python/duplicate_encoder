@@ -1,0 +1,13 @@
+def duplicate_encode(word):
+    word = word.lower()
+    final = []
+    for sub in word:
+        dupes = []
+        for s in word:
+            if sub == s:
+                dupes.append(s)
+        if len(dupes) >=2:
+            final.append(')')
+        else:
+            final.append('(')
+    return ''.join(final)
